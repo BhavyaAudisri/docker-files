@@ -5,4 +5,4 @@ copy index.html /usr/share/nginx/html/index.html
 CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 8084
 ENV course="devops"\
-    duration= "120hrs"
+    duration="120hrs"
