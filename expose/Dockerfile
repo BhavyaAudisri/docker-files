@@ -1,0 +1,8 @@
+FROM almalinux:9
+RUN dnf install nginx -y
+RUN rm -rf /usr/share/nginx/html/index.html
+ADD https://raw.githubusercontent.com/DAWS-82S/dockerfiles/refs/heads/main/CMD/Dockerfile /usr/share/nginx/html/index.html
+RUN chmod +r /usr/share/nginx/html/index.html
+ADD sample-1.tar /tmp/
+EXPOSE 8083
+CMD ["nginx", "-g", "daemon off;"]
